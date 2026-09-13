@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { getCurrentUser } from "@/lib/auth/server";
