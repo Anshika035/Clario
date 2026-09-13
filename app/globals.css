@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f5f6f8;
+  --card: #ffffff;
+  --ink: #17202a;
+  --ink-muted: #5f6b78;
+  --line: #dbe1e7;
+  --accent: #526982;
+  --accent-dark: #3d5066;
+  --accent-soft: #e9edf2;
+  --warn: #9a4a12;
+  --warn-soft: #f6e4d4;
+  --provided: #665f89;
+  --success: #32745a;
+  --success-soft: #e2f0e8;
+  --focus: #526982;
+  color-scheme: light;
+}
+
+:root.dark {
+  --paper: #0e1319;
+  --card: #151c24;
+  --ink: #e7ebef;
+  --ink-muted: #9aa5b1;
+  --line: #29333e;
+  --accent: #6f879f;
+  --accent-dark: #8298ad;
+  --accent-soft: #202b36;
+  --warn: #d89465;
+  --warn-soft: #3b2920;
+  --provided: #9f98c4;
+  --success: #75b092;
+  --success-soft: #1d3328;
+  --focus: #7890a8;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-soft: var(--accent-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-provided: var(--provided);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --font-sans: var(--font-figtree);
+  --font-display: var(--font-figtree);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.5;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease, opacity 140ms ease;
+}
+
+input,
+select,
+textarea {
+  background-color: var(--card);
+  color: var(--ink);
+}
+
+.bg-white {
+  background-color: var(--card) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body,
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    transition: none;
+  }
+}
