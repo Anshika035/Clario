@@ -9,7 +9,7 @@ import type { OpportunityAnalysisResult } from "@/types/analysis";
 import type { OpportunityInput } from "@/types/opportunity";
 
 const analyzerProvider =
-  process.env.NODE_ENV === "development" && process.env.AI_PROVIDER === "mock"
+  process.env.AI_PROVIDER === "mock"
     ? mockAiProvider
     : openAiProvider;
 
