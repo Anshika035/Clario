@@ -9,7 +9,7 @@ import type { AssistantOpportunityContext } from "@/types/ai";
 import type { AssistantConversation } from "@/types/assistant";
 
 const assistantProvider =
-  process.env.NODE_ENV === "development" && process.env.AI_PROVIDER === "mock"
+  process.env.AI_PROVIDER === "mock"
     ? mockAiProvider
     : openAiProvider;
 
